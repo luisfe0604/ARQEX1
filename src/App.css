@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+}
+label{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+input{
+    height: 50px;
+    
+}
+
+input, label{
+    width: 200px;
+    margin: auto auto;
+    text-align: center;
+    color: rgb(33, 89, 139);
+ 
+}   
+#b1, #b2, #b4{
+    width: 150px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 20px 30px;
+    background-color: #F38F07;
+    cursor: pointer;
+    font-weight: 900;
+    margin-top: 10px;
+
+}
+#b3{
+  width: 150px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 20px 30px;
+  background-color: #4a07f3;
+  cursor: pointer;
+  font-weight: 900;
+  margin-top: 10px;
+
+}
+
+h1{
+    font-size: 30pt;
+    color: #F38F07;
+    text-shadow: 2px 2px 3px black;
+}
+
+.history-list{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+#resp{
+    
+    width: 35%;
+    margin: 30px auto;
+    background-color: #659999;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 20px 0;
+}
+
+.div-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  thead {
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  th, td {
+    border: 1px solid #ecf0f1;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #ecf0f1;
+  }
+  
+  tr:hover {
+    background-color: #d5dbdb;
+  }
+  
+  h2 {
+    color: #2c3e50;
+  }
+  
+.backButton {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #F38F07;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .backButton:hover {
+    color: #ecf0f1;
+  }
+  
+  .buttons-container {
+    margin-top: 20px;
+  }
+  
+  .button-link {
+    text-decoration: none;
+  }
+  
+  .button {
+    background-color: #F38F07;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  

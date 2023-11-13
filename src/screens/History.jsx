@@ -1,26 +1,11 @@
-// History.jsx
 import React, { useEffect, useState } from 'react';
-import { getDocs, collection } from 'firebase/firestore';
-import { db } from '../../firebaseConfig';
 import { Link } from 'react-router-dom'; 
 import '../App.css'
+import { carregarHistorico } from '../service/HistoryService'
 
 const History = () => {
-  const [historico, setHistorico] = useState([]);
 
-  useEffect(() => {
-    const carregarHistorico = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, 'historico'));
-        const dadosHistorico = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-        setHistorico(dadosHistorico);
-      } catch (error) {
-        console.error('Erro ao carregar histórico:', error);
-      }
-    };
-
-    carregarHistorico();
-  }, []);
+  const historico = carregarHistorico()
 
   return (
     <div>
@@ -37,15 +22,20 @@ const History = () => {
           </tr>
         </thead>
         <tbody>
-          {historico.map((item) => (
-            <tr key={item.id}>
-              <td>{item.Nome}</td>
-              <td>{item.Nota1}</td>
-              <td>{item.Nota2}</td>
-              <td>{item.Nota3}</td>
-              <td>{item.Media}</td>
-            </tr>
-          ))}
+          {
+            historico ?
+            historico.map((item) => (
+              <tr key={item.id}>
+                <td>{item.Nome}</td>
+                <td>{item.Nota1}</td>
+                <td>{item.Nota2}</td>
+                <td>{item.Nota3}</td>
+                <td>{item.Media}</td>
+              </tr>
+            ))
+            :
+            null
+          }
         </tbody>
       </table>
     </div>

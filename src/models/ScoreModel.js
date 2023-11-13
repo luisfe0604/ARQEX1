@@ -1,11 +1,12 @@
-class ScoreModel {
-  constructor(nome, n1, n2, n3, me) {
-    this.nome = nome;
-    this.n1 = n1;
-    this.n2 = n2;
-    this.n3 = n3;
-    this.me = me;
+
+const createScoreObj = (nome, n1, n2, n3, media) => {
+  return {
+    Nome: nome, 
+    Nota1: n1, 
+    Nota2: n2, 
+    Nota3: n3, 
+    Media: media
   }
 }
 
-export default ScoreModel;
+export { createScoreObj }
